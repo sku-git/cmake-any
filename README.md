@@ -33,5 +33,18 @@ make
 To generate the cmake files for a project that is not supporting, the
 `tools/pycmake` python project should be used. See its readme for the details.
 
-## TODO
-Support the unit testing using cmocka.
+## cmocka
+Install the Cmocka as described in the https://cmocka.org.
+The cmocka can be downloaded, build and installed as described on the website.
+
+## Testing
+Write the test cases in the "sources" folder.
+Update the CMakeLists.txt file.
+Then build as described above.
+
+### Unit tests
+Each file should be self contained unit test module. This should have a main() function in it.
+Mock the required functions and write unit tests as described in the cmocka documentation.
+
+### Examples
+Some examples are available in the source for the `cliapp` provided in `guest/` folder.

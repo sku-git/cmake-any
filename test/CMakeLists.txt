@@ -93,7 +93,7 @@ include_directories( ${all_inc_dirs} )
 
 # Get all linker libraries
 get_property(all_linker_libraries GLOBAL PROPERTY PROJ_LINK_LIBRARIES)
-string(REPLACE ";" ", " use_all_linker_libraries "${all_linker_libraries}")
+string(REPLACE ";" " " use_all_linker_libraries "${all_linker_libraries}")
 set(LIBS "${LIBS} ${use_all_linker_libraries}")
 message("Link libraries : ${LIBS}")
 
@@ -112,9 +112,15 @@ message("Compiler options : ${CMAKE_C_FLAGS}")
 message("Compiler options C++ : ${CMAKE_CXX_FLAGS}")
 
 #Link external libraries
-if("${LIBS}")
+message("LIBS : ${LIBS}")
+if("${LIBS}" STREQUAL "")
+message("LIBS : ${LIBS}  : not present")
+else()
+string(STRIP ${LIBS} LIBS)
+message("true LIBS : ${LIBS}")
 target_link_libraries(${outfile} "${LIBS}")
-endif("${LIBS}")
+endif()
+# endif("${LIBS}")
 
 # Post build commands
 

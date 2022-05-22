@@ -52,7 +52,7 @@ static void Main_appStart(void)
 
 #define WELCOME_MESSAGE "Hello World"
 
-int main(void)
+int main1(void)
 {
     // initialize the device
     Main_drvInit();
