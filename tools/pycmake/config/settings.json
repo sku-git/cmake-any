@@ -1,0 +1,21 @@
+{
+  "tool": {
+    "COMMENT": "All paths are with respect to tools folder",
+    "guestRoot": "../guest",
+    "COMMENT1": "The following is the path of guest w.r.t the cmake build root directory",
+    "guestRootFromBuildDir": "../guest"
+  },
+  "cmakeGen": {
+    "COMMENT": "Paths are with respect to guestRoot",
+    "hostProject": "../test",
+    "hostCmakeFilesPath": "../test/guest",
+    "projects": [
+      {
+        "projPath": "cliapp",
+        "cmakeOutpath": "cmake-cliapp",
+        "excludeFolders": [],
+        "fileExtnList": [".c"]
+      }
+    ]
+  }
+}
