@@ -8,7 +8,7 @@
   "cmakeGen": {
     "COMMENT": "Paths are with respect to guestRoot",
     "hostProject": "../test",
-    "hostCmakeFilesPath": "../test/guest",
+    "hostCmakeFilesPath": "../test/cmake-guest",
     "projects": [
       {
         "projPath": "cliapp",

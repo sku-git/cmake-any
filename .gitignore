@@ -57,3 +57,5 @@ debug*/
 gen*/
 .idea/
 .vscode
+external/
+cmake-guest/

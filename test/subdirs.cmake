@@ -1,3 +1,3 @@
 set(sub_dirs
-guest
+cmake-guest
 )
